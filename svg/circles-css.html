@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Circles</title>
+
+    <style>
+      .circle1 {
+        fill: red;
+      }
+
+      .circle2 {
+        fill: green;
+      }
+
+      .circle3 {
+        fill: blue;
+      }
+
+      .circle1, .circle2, .circle3 {
+        opacity: 0.5;
+      }
+
+      .circle1:hover, .circle2:hover, .circle3:hover {
+        opacity: 1;
+      }
+
+      .circle1:active, .circle2:active, .circle3:active {
+        fill: gray;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <svg width="500" height="400">
+      <circle class="circle1" cx="150" cy="200" r="150" />
+      <circle class="circle2" cx="250" cy="200" r="150" />
+      <circle class="circle3" cx="350" cy="200" r="150" />
+    </svg>
+  </body>
+</html>

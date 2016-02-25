@@ -1,0 +1,97 @@
+/* Text formatting */
+
+@font-face {
+  font-family: Raleway;
+  src:
+    url('fonts/raleway_thin-webfont.ttf'),
+    url('fonts/raleway_thin-webfont.svg'),
+    url('fonts/raleway_thin-webfont.woff'),
+    url('fonts/raleway_thin-webfont.eot');
+}
+
+p, ul, li {
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  line-height: 1.3em;
+  text-align: left;
+}
+
+h1, h2, h3 {
+  font-family: Raleway, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+ul, ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  float: left;
+  padding-right: 2%;
+}
+
+/* Link states */
+
+a:link, a:visited {
+  color: black;
+  background: LightGray;
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: .4s;
+  transition-timing-function: linear;
+}
+
+a:focus, a:hover {
+  color: white;
+}
+
+a:active {
+  background: black;
+}
+
+/* Layout */
+
+#container {
+  width: 80%;
+  margin: auto;
+}
+
+main {
+  margin-top: 4em;
+  border-top: 1px solid black;
+}
+
+footer {
+  margin-top: 2em;
+}
+
+img {
+  float: left;
+  padding-right: 2%;
+  padding-bottom: 0.5em;
+}
+
+.shift {
+  position: absolute; /* relative to first parent element that has a position other than static */
+  left: 9em;
+  top: 9em;
+  z-index: -1;
+  opacity: 0.5;
+  display: none; /* disappear */
+}
+
+/* Responsive design */
+
+@media only screen and (min-width: 860px) {
+  .col1, .col2, .col3 {
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+  }
+
+  .col3 {
+    margin-right: 0;
+  }
+}

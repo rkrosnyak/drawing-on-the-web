@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>3D Picture Plane</title>
+
+    <style>
+      body {
+        padding-top: 100px;
+      }
+
+      #plane {
+        width: 400px;
+        height: 300px;
+        margin: auto;
+        border: 1px solid black;
+        perspective: 600px; /*All child elements will get the perspective view*/
+        perspective-origin: center left;
+      }
+
+      .picture {
+        opacity: 0.8;
+        transition-property: transform;
+        transition-duration: 0.5s;
+      }
+
+      .picture:hover {
+        transform: rotate3d(-1, 1, 0, 60deg);
+      }
+
+      .picture:active {
+        transform: rotate3d(1, -1, 0, 60deg);
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div id="plane">
+      <img class="picture" src="canal.jpg" width="400" height="300">
+    </div>
+  </body>
+</html>

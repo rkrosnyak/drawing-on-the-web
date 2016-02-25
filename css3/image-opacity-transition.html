@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Image Opacity Transition</title>
+    <style>
+      div {
+        width: 450px;
+        height: 250px;
+        background: url('spring.jpg');
+        background-size: 450px 250px;
+      }
+
+      img {
+        transition-property: opacity;
+        transition-duration: 1s;
+      }
+
+      img:hover {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div>
+      <img src="winter.jpg" width="450" height="250">
+    </div>
+  </body>
+</html>

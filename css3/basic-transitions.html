@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Basic Transitions</title>
+
+    <style>
+      .shape {
+        width: 250px;
+        height: 250px;
+        background-color: orange;
+        /*transition-property: background-color transform;
+        transition-duration: 1s;
+        transition-timing-function: ease;*/
+        /*transition-timing-function: cubic-bezier(.1, .9, .9, .5);*/ /* fasest, slowest, medium */
+        /*transition-delay: 500ms;*/
+        transition: all 1s ease 500ms;
+      }
+
+      .shape:hover {
+        background-color: purple;
+        transform: translate(80px, 80px) rotate(180deg);
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="shape"></div>
+  </body>
+</html>

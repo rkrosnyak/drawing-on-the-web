@@ -1,0 +1,38 @@
+#container {
+  width: 320px;
+  height: 240px;
+  margin: auto; /* center on page */
+  margin-top: 100px; /*move down slightly*/
+  perspective: 800px; /*set perspective distance*/
+}
+
+#card {
+  width: 100%;
+  height: 100%;
+  position: absolute; /*relative to first non-static parent*/
+  transform-style: preserve-3d;
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+#card:hover {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden; /*don't show from behind*/
+}
+
+.front {
+  background: gray;
+}
+
+.back {
+  background: url('fountain.jpg');
+  background-size: 320px 240px;
+  transform: rotateY(180deg);
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>SVG Shapes</title>
+  </head>
+  
+  <body>
+    <!-- SVG element goes around all SVG content -->
+    <svg width="550" height="300">
+      <defs>
+        <filter id="my-filter" x="0" y="0">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+          <!-- <feColorMatrix type="saturate" values="5" /> -->
+          <!-- <feMorphology operator="dilate" radius="10" /> -->
+          <!-- <feColorMatrix type="hueRotate" values="180" /> -->
+        </filter>
+      </defs>
+
+      <defs>
+        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="cyan" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="yellow" stop-opacity="0.8" />
+        </linearGradient>
+      </defs>
+
+      <defs>
+        <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="magenta" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="cyan" stop-opacity="0.8" />
+        </linearGradient>
+      </defs>
+
+      <defs>
+        <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="yellow" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="magenta" stop-opacity="0.8" />
+        </linearGradient>
+      </defs>
+
+      <!-- image -->
+      <!-- <image width="500" height="375" xlink:href="campus.png" filter="url(#my-filter)" opacity="0.2" /> -->
+
+      <!-- square -->
+      <rect x="30" y="30" width="240" height="240" fill="url(#gradient3)" />
+
+      <!-- line -->
+      <!-- <line x1="50" y1="150" x2="500" y2="150" stroke="black" stroke-width="1" /> -->
+
+      <!-- circle -->
+      <circle cx="270" cy="150" r="120" fill="url(#gradient1)" fill-opacity="0.8" />
+
+      <!-- triangle -->
+      <polygon points="400,30 270,270 520,270" fill="url(#gradient2)" />
+    </svg>
+  </body>
+</html>

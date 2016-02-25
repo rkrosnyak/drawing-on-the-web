@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>SVG Shapes</title>
+  </head>
+  
+  <body>
+    <!-- SVG element goes around all SVG content -->
+    <svg width="550" height="300">
+      <defs>
+        <filter id="my-filter" x="0" y="0">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+          <!-- <feColorMatrix type="saturate" values="5" /> -->
+          <!-- <feMorphology operator="dilate" radius="10" /> -->
+          <!-- <feColorMatrix type="hueRotate" values="180" /> -->
+        </filter>
+      </defs>
+
+      <defs>
+        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="cyan" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="yellow" stop-opacity="0.8" />
+        </linearGradient>
+      </defs>
+
+      <defs>
+        <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="magenta" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="cyan" stop-opacity="0.8" />
+        </linearGradient>
+      </defs>
+
+      <defs>
+        <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="yellow" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="magenta" stop-opacity="0.8" />
+        </linearGradient>
+      </defs>
+
+      <!-- image -->
+      <!-- <image width="500" height="375" xlink:href="campus.png" filter="url(#my-filter)" opacity="0.2" /> -->
+
+      <!-- square -->
+      <rect x="30" y="30" width="240" height="240" fill="url(#gradient3)">
+        
+        <animate id="sqr" attributeName="height" attributeType="XML"
+        from="0" to="240"
+        begin="0s" dur="2s"
+        fill="remove" repeatCount="0" />
+
+      </rect>
+
+      <!-- line -->
+      <!-- <line x1="50" y1="150" x2="500" y2="150" stroke="black" stroke-width="1" /> -->
+
+      <!-- circle -->
+      <circle cx="-120" cy="150" r="120" fill="url(#gradient1)" fill-opacity="0.8">
+        <!-- <set
+        attributeName="r"
+        attributeType="XML"
+        to="60"
+        begin="2s" /> -->
+
+        <animate id="crcl" attributeName="cx" attributeType="XML"
+          from="-120" to="270"
+          begin="sqr.end" dur="2s"
+          fill="freeze" repeatCount="0" />
+
+      </circle>
+
+      <!-- triangle -->
+      <polygon points="400,30 400,270 400,270" fill="url(#gradient2)">
+        
+        <animate id="tri" attributeName="points" attributeType="XML"
+        from="400,30 400,270 400,270" to="400,30 270,270 520,270"
+        begin="crcl.end" dur="2s"
+        fill="freeze" repeatCount="0" />
+
+      </polygon>
+    </svg>
+  </body>
+</html>
