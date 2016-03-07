@@ -10,8 +10,7 @@
 }
 
 p, ul, li {
-  color: black;
-  font-family: "Courier New", Courier, monospace;
+  font-family: Raleway, Helvetica, sans-serif;
   font-size: 1em;
   line-height: 1.3em;
   text-align: left;
@@ -59,7 +58,7 @@ a:active {
 }
 
 main {
-  margin-top: 4em;
+  margin-top: 20px;
   border-top: 1px solid black;
 }
 
@@ -80,6 +79,18 @@ img {
   z-index: -1;
   opacity: 0.5;
   display: none; /* disappear */
+}
+
+.p1 {
+  color: #FF0000;
+}
+
+.p2 {
+  color: #13FF00;
+}
+
+.p3 {
+  color: #0055FF;
 }
 
 /* Responsive design */
